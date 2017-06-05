@@ -1,2 +1,2 @@
 # masterskaya
-there is a first react-project by Lavrynovych Bohdan and Maria 
+this is a first react-project by Lavrynovych Bohdan and Maria 
