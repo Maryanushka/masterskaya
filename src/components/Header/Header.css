@@ -1,0 +1,296 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10rem 0 10.2rem;
+  width: 100%;
+}
+.header_logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_logo>p{
+  display: block;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #4F4F4F;
+  font-family: "Lora";
+}
+.header_content{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  width: 100%;
+  justify-content: center;
+}
+.main_title{
+  background-color: #F9F0DD;
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-family: "Lora";
+  padding: 8.12rem 7.5rem ;
+  margin-top: 0;
+}
+
+a{
+  text-decoration: none;
+  font-family: "Roboto";
+  color: var(--font-color);
+}
+.enabled{
+  color: #C4C4C4;
+  font-size: 1.2rem;
+  padding-right: .5rem;
+}
+.disabled{
+  color: #000;
+  font-size: 1.2rem;
+  padding-left: .5rem;
+}
+.header_content>span{
+  float: left;
+}
+.button{
+  padding: 0.9rem 2.5rem;
+  float: right;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: .1rem solid #3C3C43;
+}
+.button:hover, .button:active, .button:focus{
+  border: .1rem solid var(--hover-link);
+  color: var(--hover-link);
+}
+.header_content_left{
+  width: 65%;
+}
+.header_content_right{
+  width: 25%;
+  padding: 4.2rem 1.8rem 4.4rem;
+  border: .1rem solid #3C3C43;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_content_right_inner{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+.header_content_right_inner img{
+  padding-right: 1rem;
+}
+.header_content_right_info{
+  display: flex;
+  flex-direction: column;
+
+}
+.header_content_right_info>p{
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.header_content_right_info_phone{
+  font-size: 1.5rem;
+}
+.header_content_right_info>h2{
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/*menu*/
+
+.header_content_right_menu>ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem 0 0 0;
+}
+.header_content_right_menu>ul>li>a{
+  font-size: 1.5rem;
+  padding: .5rem 0;
+  border-bottom: .1rem solid var(--font-color);
+}
+.header_content_right_menu>ul>li>a:hover, .header_content_right_menu>ul>li>a:active, .header_content_right_menu>ul>li>a:focus{
+  border-color: var(--hover-link);
+  color: var(--hover-link);
+}
+.header_content_right_menu>ul>li{
+  padding: .5rem 0;
+}
+/*mobile menu*/
+
+
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  background-color: #fff;
+  top: 0;
+}
+nav>h1{
+  font-family: "Lora";
+  font-size: 3rem;
+  display: block;
+  margin: 2rem;
+}
+.mobile_menu_container{
+    display: none;
+}
+.mobile_menu_container_inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.mobile_menu_container_inner>img{
+  padding-right: 1rem;
+}
+.header_content_right_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mobile_menu_container_menu{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.mobile_menu_container_menu>ul{
+  margin: 0 0 0 -4rem;
+  padding: 0;
+  list-style-type: none;
+}
+.mobile_menu_container_menu>ul>li{
+  padding: 1rem 0;
+}
+.mobile_menu_container_menu>ul>li>a{
+  font-size: 2rem;
+}
+.mobile_menu_container>.button{
+  float: none;
+  position: relative;
+  top: 6rem;
+  float: none;
+  left: 40%;
+}
+  .header_content_right_info>h2{
+    font-family: "Lora";
+  }
+.mobile_menu_container_wrapper{
+  display: block;
+  min-height: 33rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  padding: 5rem 0;
+}
+.button_mobile{
+  padding: 0.9rem 2.5rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: .1rem solid #3C3C43;
+  position: absolute;
+  bottom: 10%;
+  left: 35%;
+}
+/*button*/
+.switch {
+  width: 30px;
+  height: 23px;
+  position: absolute;
+  right: 0;
+  top: 2.5rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+.switch.on:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+.switch.on:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.switch .menu {
+  width: 100%;
+  height: .3rem;
+  background: var(--font-color);
+  margin: 4px auto;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+.switch.on .menu {
+  opacity: 0;
+}
+.switch:before, .switch:after {
+  content: "";
+  display: block;
+  height: .3rem;
+  background: var(--font-color);
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+
+@media(max-width: 768px){
+  .header_content_right{
+    display: none;
+  }
+  .header_content_left{
+    width: 98%;
+  }
+  .mobile_menu_container{
+    display: block;
+  }
+}
+@media(max-width: 550px){
+  .header_content_right_info,
+  .header_content_right_info_phone,
+  .header_content_right_info>h2{
+    font-size: 2em;
+  }
+  .mobile_menu_container_menu{
+    margin-top: 2rem;
+  }
+  .mobile_menu_container_menu>ul{
+    margin: 0 0 0 -8rem;
+  }
+  .mobile_menu_container_menu>ul>li>a{
+    font-size: 3em;
+  }
+.button_mobile{
+    font-size: 3em;
+    left: 18%;
+  }
+  .mobile_menu_container_wrapper{
+    min-height: 60rem;
+  }
+  .catalog_container_modal_item_rect>img{
+    width: 27.5rem;
+  }
+}
