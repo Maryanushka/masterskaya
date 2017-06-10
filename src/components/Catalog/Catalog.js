@@ -11,7 +11,6 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Catalog.css';
 import Link from '../Link';
-import Navigation from '../Navigation';
 import squareImg from './catalog.jpg';
 import rectImg from './rectangle.jpg';
 
@@ -27,7 +26,8 @@ class Header extends React.Component {
               <li className={s.catalog_container_menu_item}><a href="#">Складні архітектурні вироби</a></li>
               <li className={s.catalog_container_menu_item}><a href="#">Садово-паркове мистецтво</a></li>
             </ul>
-            <a href="#" className={s.button}>Каталог продукції</a>
+             <Link className={s.button} to="/catalog">Каталог продукції</Link>
+         {/*<a href="#" className={s.button}>Каталог продукції</a> */}   
           </div>
           <div className={s.catalog_container_modal_item_squre}>
             <img src={squareImg} alt="Портрети" />

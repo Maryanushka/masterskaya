@@ -238,7 +238,7 @@ nav>h1{
 }
 .switch .menu {
   width: 100%;
-  height: .3rem;
+  height: .4rem;
   background: var(--font-color);
   margin: 4px auto;
   transition: all 0.3s;

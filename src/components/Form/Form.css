@@ -1,0 +1,75 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+.form_container{
+  margin-top: 8rem;
+  text-align: center;
+}
+.form_container>h1{
+  font-family: "Lora";
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+.form_container>p{
+  font-weight: bold;
+}
+.form_container_wrapper{
+  margin-top: 2rem;
+}
+.form_container_wrapper>form{
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 0 auto;
+}
+.form_container_wrapper>form>input,
+.form_container_wrapper>form>textarea{
+  padding-left: 1rem;
+  margin:  0 0 2rem 0;
+  height: 2rem;
+  border: .12rem solid var(--font-color);
+  border-radius: .2rem;
+}
+.form_container_wrapper>form>textarea{
+  height: 8rem;
+  padding-top: 1rem;
+}
+input[type=submit]{
+  background-color: var(--font-color);
+  color: #fff;
+  min-height: 2rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+@media( max-width: 34.5rem){
+  .form_container_wrapper>form>input,
+  .form_container_wrapper>form>textarea{
+    padding: 1rem;
+  }
+  .form_container_wrapper>form{
+    width: 95%;  
+  }
+  .form_container{
+    font-size: 2em;
+  }
+  input[type=submit]{
+    padding: 1rem;
+
+  }
+}

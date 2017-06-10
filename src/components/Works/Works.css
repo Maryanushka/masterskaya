@@ -1,0 +1,75 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+a{
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+
+.button{
+  padding: 0.9rem 2.5rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: .1rem solid #3C3C43;
+}
+.button:hover, .button:focus,.button:active{
+  color: var(--hover-link);
+  border-color: var(--hover-link);
+}
+
+.works_container{
+  margin-top: 5rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+.works_container_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.works_container_caption{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 1rem;
+  justify-content: center;
+  align-items: space-between;
+  width: 15rem ;
+}
+.works_container_caption>img{
+  width: 15rem;
+  height: auto;
+}
+@media( max-width: 34.5rem){
+  .works_container_caption>img{
+    width: 100%;
+  }
+  .works_container_caption{
+    width: 100%;
+    flex-direction: column;
+  }
+  .works_container,a{
+    font-size: 2em;
+    padding: 0 3rem;
+  }
+}

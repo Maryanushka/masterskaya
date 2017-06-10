@@ -16,8 +16,10 @@ import normalizeCss from 'normalize.css';
 import s from './Layout.css';
 import Header from '../Header';
 import Catalog from '../Catalog';
-
-
+import About from '../About';
+import Works from '../Works';
+import Form from '../Form';
+import Footer from '../Footer';
 class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -28,6 +30,10 @@ class Layout extends React.Component {
       <div>
         <Header />
         <Catalog />
+        <About />
+        <Works />
+        <Form />
+        <Footer />
       </div>
     );
   }

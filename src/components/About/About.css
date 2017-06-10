@@ -1,0 +1,91 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+a{
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-top: 18.75rem;
+  color: var(--font-color);
+  border-bottom: .1rem solid var(--font-color);
+  padding: .5rem 0;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus{
+  color: var(--hover-link);
+  border-bottom: .1rem solid var(--hover-link);
+}
+.about_container{
+  display: flex;
+  padding: 2rem 4rem;
+}
+.about_container>img{
+  width: 40%;
+  height: 25rem;
+}
+.about_container_descr{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.75rem;
+  align-items: space-around;
+  padding-top: 7rem;
+}
+.about_container_descr>h1{
+  margin-top: 0;
+  font-family: "Lora";
+}
+.about_container_descr>p{
+  margin-top: 0;
+}
+
+.about_container_menu{
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.about_container_menu>li:nth-child(2){
+  margin-left: 2rem;
+}
+@media( max-width: 34.5rem){
+  .about_container{
+    flex-direction: column;
+  }
+  .about_container>img{
+    width: 100%;
+    height: 45rem;
+  }
+  .about_container_menu{
+    flex-direction: column;
+  }
+  .about_container_menu>li:nth-child(2){
+    margin-left: 0;
+  }
+  .about_container_menu>li{
+    margin-top: 2rem;
+  }
+  .about_container_descr{
+    padding-top: 2rem;
+    margin: 0;
+  }
+  .about_container_descr,
+  .about_container_desce>p,
+  .about_container_descr>ul>li>a{
+    font-size: 1.5em;
+  }
+}
