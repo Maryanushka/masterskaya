@@ -12,7 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Form.css';
 import Link from '../Link';
 
-class Footer extends React.Component {
+class Form extends React.Component {
  constructor(props) {
     super(props);
     this.state = {
@@ -120,4 +120,4 @@ class Footer extends React.Component {
   }
 }
 
-export default withStyles(s)(Footer);
+export default withStyles(s)(Form);

@@ -11,9 +11,8 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './About.css';
 import Link from '../Link';
-import aboutImg from './about.jpg';
 
-class Header extends React.Component {
+class About extends React.Component {
    constructor(props) {
    super(props);
    this.state={
@@ -52,5 +51,5 @@ class Header extends React.Component {
   }
 }
 
-export default withStyles(s)(Header);
+export default withStyles(s)(About);
   

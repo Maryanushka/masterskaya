@@ -11,10 +11,9 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Works.css';
 import Link from '../Link';
-import worksImg from './worksImg.jpg';
 
 
-class Header extends React.Component {
+class Works extends React.Component {
  
  constructor(props) {
    super(props);
@@ -66,5 +65,5 @@ componentDidMount() {
   }
 }
 
-export default withStyles(s)(Header);
+export default withStyles(s)(Works);
    

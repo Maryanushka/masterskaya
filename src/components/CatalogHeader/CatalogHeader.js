@@ -13,7 +13,7 @@ import s from './CatalogHeader.css';
 import Link from '../Link';
 
 
-class Header extends React.Component {
+class CatalogHeader extends React.Component {
   render() {
     return (
       <div className={s.root}>
@@ -35,5 +35,5 @@ class Header extends React.Component {
   }
 }
 
-export default withStyles(s)(Header);
+export default withStyles(s)(CatalogHeader);
   

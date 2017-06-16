@@ -12,8 +12,9 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Catalog.css';
 import Link from '../Link';
 import squareImg from './catalog.jpg';
-import rectImg from './rectangle.jpg';Link
-class Header extends React.Component {
+import rectImg from './rectangle.jpg';
+
+class Catalog extends React.Component {
   
   render() {
     return (
@@ -51,5 +52,5 @@ class Header extends React.Component {
   }
 }
 
-export default withStyles(s)(Header);
+export default withStyles(s)(Catalog);
   
