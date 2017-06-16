@@ -89,7 +89,7 @@ a{
   color: var(--hover-link);
 }
 @media( max-width: 34.5rem){
-  .works_container_caption>img{
+  .works_container_caption>a>img{
     width: 100%;
   }
   .works_container_caption{

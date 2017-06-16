@@ -31,13 +31,14 @@ a:hover, a:active, a:focus{
 }
 .catalog_container {
   position: relative;
-  padding: 7rem 0 0 0;
+  padding: 7rem 0 1rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-width: 62rem;
+  margin-top: 10rem;
 }
 .catalog_container>h1{
   font-family: "Lora";

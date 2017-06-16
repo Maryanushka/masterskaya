@@ -43,7 +43,7 @@ class Header extends React.Component {
                             <li className={s.menu_item}><Link to="/catalog">Наші роботи</Link></li>
                           </ul>
                         </div>
-                        <a href="#" className={s.button_mobile}>Звязатись з нами</a>
+                        <Link to="/" className={s.button_mobile}>Звязатись з нами</Link>
                      </div>;
     }
     return (

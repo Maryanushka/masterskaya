@@ -37,7 +37,11 @@ a {
 h1{
   font-family: "Lora";
 }
-
+@media( max-width: 34.5rem){
+  html{
+    font-size: 2vw;
+  }
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
