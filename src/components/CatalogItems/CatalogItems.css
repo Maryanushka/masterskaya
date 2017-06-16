@@ -38,6 +38,7 @@ a:hover, a:active, a:focus{
   padding: 1rem 0 0 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   font-weight: bold;
   border-top: .1rem solid var(--font-color);
 }
@@ -46,6 +47,7 @@ a:hover, a:active, a:focus{
 }
 .inner_aquifer_container_wrapper_filter>li:first-child{
   padding-right: 3rem;
+  padding-left: 0;
 }
 .inner_aquifer_container_wrapper_image,
 .inner_architect_container_wrapper_image,
