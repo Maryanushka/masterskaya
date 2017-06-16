@@ -32,15 +32,15 @@ class Header extends React.Component {
                           <img src={logoUrl} width="40px" height="100px" alt="Майстерня" />
                             <div className={s.header_content_right_info}>
                               <h2>Майстерня</h2>
-                              <p className={s.header_content_right_info_phone}> +38 066 445 59 00 </p>
+                              <Link to="+380664455900" className={s.header_content_right_info_phone}> +38 066 445 59 00 </Link>
                               <p className={s.header_content_right_info_adress}> м. Мукачево, вул. Переяславська, 1</p>
                             </div>
                         </div>  
                         <div className={s.mobile_menu_container_menu}>
                           <ul>
-                            <li className={s.menu_item}><a href="#">Каталог продукції</a></li>
-                            <li className={s.menu_item}><a href="#">Про нас</a></li>
-                            <li className={s.menu_item}><a href="#">Наші роботи</a></li>
+                            <li className={s.menu_item}><Link to="/catalog">Каталог продукції</Link></li>
+                            <li className={s.menu_item}><Link to="/catalog">Про нас</Link></li>
+                            <li className={s.menu_item}><Link to="/catalog">Наші роботи</Link></li>
                           </ul>
                         </div>
                         <a href="#" className={s.button_mobile}>Звязатись з нами</a>
@@ -68,7 +68,8 @@ class Header extends React.Component {
             <span><a href="#" className={s.enabled}>укр</a></span>
             <span>/</span>
             <span><a href="#" className={s.disabled}>рус</a></span>
-            <a href="#" className={s.button}>Звязатись з нами</a>
+
+            <Link to="/catalog" className={s.button}>Звязатись з нами</Link>
           </div>
 
           <div className={s.header_content_right}>
@@ -77,15 +78,15 @@ class Header extends React.Component {
               <img src={logoUrl} width="48px" height="133px" alt="Майстерня" />
               <div className={s.header_content_right_info}>
                 <h2>Майстерня</h2>
-                <p className={s.header_content_right_info_phone}> +38 066 445 59 00 </p>
+                <Link to="+380664455900" className={s.header_content_right_info_phone}> +38 066 445 59 00 </Link>
                 <p className={s.header_content_right_info_adress}> м. Мукачево, вул. Переяславська, 1</p>
               </div>
             </div>  
             <div className={s.header_content_right_menu}>
               <ul>
-                <li className={s.menu_item}><a href="#">Каталог продукції</a></li>
-                <li className={s.menu_item}><a href="#">Про нас</a></li>
-                <li className={s.menu_item}><a href="#">Наші роботи</a></li>
+                <li className={s.menu_item}><Link to="/cataloLink">Каталог продукції</Link></li>
+                <li className={s.menu_item}><Link to="/cataloLink">Про нас</Link></li>
+                <li className={s.menu_item}><Link to="/cataloLink">Наші роботи</Link></li>
               </ul>
             </div>          
           </div>

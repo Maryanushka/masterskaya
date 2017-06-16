@@ -31,7 +31,7 @@ a:hover, a:active, a:focus{
 }
 .catalog_container {
   position: relative;
-  padding: 7rem 0;
+  padding: 7rem 0 0 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@ a:hover, a:active, a:focus{
   font-family: "Lora";
   position: absolute;
   top: 5%;
-  left: 15%;
+  left: 8.5%;
   margin-bottom: 0;
 }
 .catalog_container_menu{
@@ -92,6 +92,12 @@ a:hover, a:active, a:focus{
   font-weight: bold;
   font-size: 1.25rem;
   border: .1rem solid #3C3C43;
+}
+.button:hover,
+.button:active,
+.button:focus{
+  background-color: var(--font-color);
+  color: white;
 }
 @media (max-width: 990px) {
   .catalog_container>h1{

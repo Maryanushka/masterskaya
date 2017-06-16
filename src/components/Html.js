@@ -43,6 +43,8 @@ class Html extends React.Component {
           <meta name="description" content={description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           {styles.map(style => (
             <style
               key={style.id}
@@ -55,16 +57,8 @@ class Html extends React.Component {
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
           <script dangerouslySetInnerHTML={{ __html: `window.App=${serialize(app)}` }} />
           {scripts.map(script => <script key={script} src={script} />)}
-          {config.analytics.googleTrackingId &&
-            <script
-              dangerouslySetInnerHTML={{ __html:
-              'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' +
-              `ga('create','${config.analytics.googleTrackingId}','auto');ga('send','pageview')` }}
-            />
-          }
-          {config.analytics.googleTrackingId &&
-            <script src="https://www.google-analytics.com/analytics.js" async defer />
-          }
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ 
         </body>
       </html>
     );

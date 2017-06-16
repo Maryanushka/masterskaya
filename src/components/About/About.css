@@ -33,6 +33,7 @@ a:hover, a:active, a:focus{
 .about_container{
   display: flex;
   padding: 2rem 4rem;
+  margin: 10rem 0;
 }
 .about_container>img{
   width: 40%;
@@ -43,7 +44,7 @@ a:hover, a:active, a:focus{
   flex-direction: column;
   margin-left: 3.75rem;
   align-items: space-around;
-  padding-top: 7rem;
+  padding-top: 1rem;
 }
 .about_container_descr>h1{
   margin-top: 0;

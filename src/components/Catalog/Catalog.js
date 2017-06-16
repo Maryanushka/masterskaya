@@ -12,9 +12,9 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Catalog.css';
 import Link from '../Link';
 import squareImg from './catalog.jpg';
-import rectImg from './rectangle.jpg';
-
+import rectImg from './rectangle.jpg';Link
 class Header extends React.Component {
+  
   render() {
     return (
       <div className={s.root}>
@@ -22,28 +22,27 @@ class Header extends React.Component {
           <h1>Каталог продукції</h1>
           <div className={s.catalog_container_menu}>
             <ul>
-              <li className={s.catalog_container_menu_item}><a href="#">Внутрішне та зовнішне оздоблення</a></li>
-              <li className={s.catalog_container_menu_item}><a href="#">Складні архітектурні вироби</a></li>
-              <li className={s.catalog_container_menu_item}><a href="#">Садово-паркове мистецтво</a></li>
+              <li className={s.catalog_container_menu_item}><Link to="/catalog">Внутрішне та зовнішне оздоблення</Link></li>
+              <li className={s.catalog_container_menu_item}><Link to="/catalog">Складні архітектурні вироби</Link></li>
+              <li className={s.catalog_container_menu_item}><Link to="/catalog">Садово-паркове мистецтво</Link></li>
             </ul>
-             <Link className={s.button} to="/catalog">Каталог продукції</Link>
-         {/*<a href="#" className={s.button}>Каталог продукції</a> */}   
+             <Link className={s.button} to="/catalog">Каталог продукції</Link>  
           </div>
           <div className={s.catalog_container_modal_item_squre}>
             <img src={squareImg} alt="Портрети" />
-            <a href>Портрети</a> 
+            <Link  to="/catalog">Портрети</Link> 
           </div>
           <div className={s.catalog_container_modal_item_squre}>
             <img src={squareImg} alt="Скульптури" />
-            <a href>Скульптури</a>
+            <Link to="/catalog">Скульптури</Link>
           </div>
           <div className={s.catalog_container_modal_item_rect}>
             <img src={rectImg} alt="Каміни" />
-            <a href>Каміни</a>
+            <Link  to="/catalog">Каміни</Link>
           </div>
           <div className={s.catalog_container_modal_item_rect}>
             <img src={rectImg} alt="Столешні" />
-            <a href>Столешні</a>
+            <Link to="/catalog">Столешні</Link>
           </div>
 
         </div>

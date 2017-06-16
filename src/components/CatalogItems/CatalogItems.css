@@ -1,0 +1,85 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+a{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--font-color);
+  border-bottom: .1rem solid var(--font-color);
+  padding: .5rem 0;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus{
+  color: var(--hover-link);
+  border-bottom: .1rem solid var(--hover-link);
+}
+.catalog_container>h1{
+  margin: 4rem;
+}
+.inner_aquifer_container_wrapper_filter,
+.inner_architect_container_wrapper_image,
+.inner_park_container_wrapper_image{
+  padding: 1rem 0 0 0;
+  list-style-type: none;
+  display: flex;
+  font-weight: bold;
+  border-top: .1rem solid var(--font-color);
+}
+.inner_aquifer_container_wrapper_filter>li{
+  padding-left: 1rem; 
+}
+.inner_aquifer_container_wrapper_filter>li:first-child{
+  padding-right: 3rem;
+}
+.inner_aquifer_container_wrapper_image,
+.inner_architect_container_wrapper_image,
+.inner_park_container_wrapper_image{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.image_container{
+  width: 35rem;
+  height: 20rem;
+  padding-right: 1rem;
+}
+.image_container>img{
+  width: 35rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.inner_aquifer_container_wrapper,
+.inner_architect_container_wrapper,
+.inner_parkr_container_wrapper{
+  width: 68%;
+}
+.inner_aqufer_container,
+.inner_architect_container,
+.inner_park_container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  margin-top: 5rem;
+}
+.inner_architect_container>p,
+.inner_park_container>p{
+  margin: 0;
+}

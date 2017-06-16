@@ -21,7 +21,7 @@ class Page extends React.Component {
   render() {
     const { title, html } = this.props;
     return (
-      <div className={s.root}>
+{/*     <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
           <div
@@ -29,7 +29,7 @@ class Page extends React.Component {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-      </div>
+      </div>*/} 
     );
   }
 }

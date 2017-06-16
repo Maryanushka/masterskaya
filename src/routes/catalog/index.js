@@ -8,18 +8,16 @@
  */
 
 import React from 'react';
-import Layout from '../../components/Layout';
 import Catalog from './Catalog';
-import Footer from '../../components/Footer';
-import Form from '../../components/Form';
-
-
+import Layout from '../../components/Layout';
 
 export default {
 
+  path: '/catalog',
 
   action() {
     return {
+      title: 'Catalog',
       component: <Layout><Catalog /></Layout>,
     };
   },

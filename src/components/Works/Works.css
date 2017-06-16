@@ -32,10 +32,14 @@ a{
   font-weight: bold;
   font-size: 1.25rem;
   border: .1rem solid #3C3C43;
+  position: absolute;
+  bottom: 0;
 }
-.button:hover, .button:focus,.button:active{
-  color: var(--hover-link);
-  border-color: var(--hover-link);
+.button:hover,
+.button:active,
+.button:focus{
+  background-color: var(--font-color);
+  color: white;
 }
 
 .works_container{
@@ -47,6 +51,8 @@ a{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  padding-bottom: 4rem;
 }
 .works_container_caption{
   display: flex;
@@ -59,6 +65,28 @@ a{
 .works_container_caption>img{
   width: 15rem;
   height: auto;
+}
+.works_container_caption>a{
+     font-size: 1rem; 
+     font-weight: normal; 
+     color: #3C3C43; 
+     border-bottom: none; 
+     padding: 0; 
+}
+.works_container_caption>a>img{
+  width: 15rem;
+}
+.works_container_caption>a>img:hover,
+.works_container_caption>a>img:active,
+.works_container_caption>a>img:focus{
+  cursor: pointer;
+  opacity: .7;
+}
+.works_container_caption>a:hover,
+.works_container_caption>a:active,
+.works_container_caption>a:focus{
+  border: none;
+  color: var(--hover-link);
 }
 @media( max-width: 34.5rem){
   .works_container_caption>img{

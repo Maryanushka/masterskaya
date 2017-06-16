@@ -8,18 +8,25 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import Form from '../../components/Form';
+import Footer from '../../components/Footer';
+import CatalogHeader from '../../components/CatalogHeader';
+import About from '../../components/About';
+import CatalogItems from '../../components/CatalogItems';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Catalog.css';
 
-class Catalog extends React.Component {
-	render() {
-		return(
-			<div className={s.root}>
-				There is catalog page
-			</div>
-		);
-	}	
-}
+
+
+
+
+const Catalog = ()=>
+      <div>
+     	<CatalogHeader />
+      	<CatalogItems />
+      	<About />
+      	<Form />
+      	<Footer />
+      </div>
 
 export default withStyles(s)(Catalog);

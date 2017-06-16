@@ -45,12 +45,34 @@ class Footer extends React.Component {
   }
 
 
+
   handleSubmit(event) {
-    console.log('A name was submitted: ' + this.state.name);
-    console.log('A name was submitted: ' + this.state.phone);
-    console.log('A email was submitted: ' + this.state.email);
-    console.log('A textarea was submitted: ' + this.state.textarea);
-    event.preventDefault();
+     let data = {
+      name: this.state.name,
+      phone: this.state.phone,
+      email: this.state.email,
+      textarea: this.state.textarea
+    }
+    console.log(data);
+
+      fetch('http://maysternja.dataroot.co/callback', {  
+          method: 'post',  
+          headers: {  
+            "Content-type": "multipart/form-data"  
+          },  
+          body: data  
+        }) 
+        .then(function (data) {  
+          console.log('Request succeeded with JSON response', data);  
+        })  
+        .catch(function (error) {  
+          console.log('Request failed', error);  
+        });
+
+      // 'http://maysternja.dataroot.co/callback'
+// http://jsonplaceholder.typicode.com/posts
+
+      event.preventDefault();
   }
 
   
@@ -63,19 +85,22 @@ class Footer extends React.Component {
           <p>Зв’яжіться з нами та дізнайтесь більше</p>
           <div className={s.form_container_wrapper}>
             <form onSubmit={this.handleSubmit}>
-                <input  type="text"
+                <input  required
+                        type="text"
                         name="name"
                         placeholder="Ім'я"
                         value={this.state.name} 
                         onChange={this.handleNameChange} />
 
-                <input  type="text"
+                <input  required
+                        type="text"
                         name="phone number"
                         placeholder="Телефон"
                         value={this.state.phone}
                         onChange={this.handlePhoneChange}/>
 
-                <input  type="email"
+                <input  required
+                        type="email"
                         placeholder="E-mail"
                         name="Email"
                         value={this.state.email} 

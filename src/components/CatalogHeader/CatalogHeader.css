@@ -1,0 +1,88 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --font-color: #3C3C43;
+  --hover-link: #747880;
+}
+
+.root {
+  background: #fff;
+}
+a{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--font-color);
+  border-bottom: .1rem solid var(--font-color);
+  padding: .5rem 0;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus{
+  color: var(--hover-link);
+  border-bottom: .1rem solid var(--hover-link);
+}
+.button{
+  padding: 0.9rem 2.5rem;
+  float: right;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: .1rem solid #3C3C43;
+}
+.button:hover,
+.button:active,
+.button:focus{
+  background-color: var(--font-color);
+  color: white;
+}
+
+.button{
+  padding: 0.5rem 2.1rem;
+  float: right;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: .1rem solid #3C3C43;
+}
+
+.enabled{
+  color: #C4C4C4;
+  font-size: 1.2rem;
+  padding-right: .5rem;
+}
+.disabled{
+  color: #000;
+  font-size: 1.2rem;
+  padding-left: .5rem;
+}
+.catalogHeader_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem 0;
+border-bottom: .1rem solid rgba(116, 120, 128, .1);
+}
+.catalogHeader_container>h1{
+  padding: 0 10rem 0 2rem ;
+  margin: 0; 
+}
+.catalogHeader_container_wrapper>p{
+  margin: 0;
+}
+.catalogHeader_container_wrapper>p>a{
+  border-bottom: none;
+}
+@media (max-width: 990px) {
+
+}
+@media(max-width: 768px){
+  font-size: 2em;
+}
