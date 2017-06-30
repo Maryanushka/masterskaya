@@ -17,6 +17,7 @@ import Link from '../Link';
 
 let img ;
 let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
+
 class CatalogItems extends React.Component {
 constructor(props) {
    super(props);
@@ -31,40 +32,37 @@ constructor(props) {
 
 
 componentDidMount() {
-var apiRequest1 = fetch('http://maysternja.dataroot.co/catalog/decoration/?type=%7BString%7D')
-	.then(function(response){ 
-         return response.json()
-});
-var apiRequest2 = fetch('http://maysternja.dataroot.co/catalog/decoration/')
-	.then(function(response){
-         return response.json()
-});
-  Promise.all([apiRequest1,apiRequest2]) 
-  .then(values => {
-      this.setState({
-         decoration: values[1],
-         type: values[0]         
-       })
-   });  
+    var apiRequest1 = fetch('http://maysternja.dataroot.co/catalog/decoration/?type=%7BString%7D')
+    	.then(function(response){ 
+             return response.json()
+    });
+    var apiRequest2 = fetch('http://maysternja.dataroot.co/catalog/decoration/')
+    	.then(function(response){
+             return response.json()
+    });
+      Promise.all([apiRequest1,apiRequest2]) 
+      .then(values => {
+          this.setState({
+             decoration: values[1],
+             type: values[0]         
+           })
+       });  
 }
 
 getMarble(){
   let data = this.state.decoration; 
-  
+ 
   let j =0;
   for( let i= 0; i < data.length; i++){
       data[i].type= t[j%6];
       j++;
   }
 
-  let img = data.filter(function(data){
-  return data.type['type'] === 'marble';})
+  return img = data
+  .filter(function(data){return data.type['type'] === 'marble';})
   .map((deco,i) => {return(<div className={s.image_container} key={i}>
-                                    <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
-                                </div>)});
-//  console.log(img);
-  return img;
-
+                                <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
+                            </div>)});
 }
 
 getGranite(){
@@ -74,14 +72,11 @@ getGranite(){
       data[i].type= t[j%6];
       j++;
   }
-  let img = data
-  .filter(function(data){
-  return data.type['type'] === 'granite';})
+  return img = data
+  .filter(function(data){return data.type['type'] === 'granite';})
   .map((deco,i) => {return(<div className={s.image_container} key={i}>
                                     <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
                                 </div>)});
-  return img;
-
 }
 
 getDefault(){
@@ -97,8 +92,6 @@ getDefault(){
 }
   render() {
   img = this.getDefault();
- //img = ;
-// this.state.decoration.map((deco,i) => {return(<div className={s.image_container} key={i}><img src={deco.img} alt={deco.alt} type={deco.type['type']} /></div>)});
 
     return (
       <div className={s.root}>
