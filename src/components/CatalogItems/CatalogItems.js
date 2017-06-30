@@ -16,6 +16,7 @@ import Link from '../Link';
 
 
 let img ;
+let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
 class CatalogItems extends React.Component {
 constructor(props) {
    super(props);
@@ -25,6 +26,7 @@ constructor(props) {
    }  
    this.getMarble = this.getMarble.bind(this); 
    this.getGranite = this.getGranite.bind(this); 
+   this.getDefault = this.getDefault.bind(this);
  };
 
 
@@ -48,53 +50,53 @@ var apiRequest2 = fetch('http://maysternja.dataroot.co/catalog/decoration/')
 
 getMarble(){
   let data = this.state.decoration; 
-  let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
-  var j =0;
-  for( var i= 0; i < data.length; i++){
-      data[i].type= t[j];
+  
+  let j =0;
+  for( let i= 0; i < data.length; i++){
+      data[i].type= t[j%6];
       j++;
-      if(j < t.length){
-      }else {
-          j = j -6;
-      }
   }
-  let img = this.state.decoration
-  .filter(function(data){
+
+  let img = data.filter(function(data){
   return data.type['type'] === 'marble';})
   .map((deco,i) => {return(<div className={s.image_container} key={i}>
                                     <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
                                 </div>)});
-  console.log(img);
+//  console.log(img);
   return img;
 
 }
 
 getGranite(){
   let data = this.state.decoration; 
-  let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
-  var j =0;
-  for( var i= 0; i < data.length; i++){
-      data[i].type= t[j];
+  let j =0;
+  for( let i= 0; i < data.length; i++){
+      data[i].type= t[j%6];
       j++;
-      if(j < t.length){
-      }else {
-          j = j -6;
-      }
   }
-
-  console.log(data);
-  let img = this.state.decoration
+  let img = data
   .filter(function(data){
   return data.type['type'] === 'granite';})
   .map((deco,i) => {return(<div className={s.image_container} key={i}>
                                     <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
                                 </div>)});
- // console.log(img);
   return img;
 
 }
+
+getDefault(){
+  let data = this.state.decoration; 
+  let j =0;
+  for( let i= 0; i < data.length; i++){
+      data[i].type= t[j%6];
+      j++;
+  }
+  return img = data.map((deco,i) => {return(<div className={s.image_container} key={i}>
+                                    <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
+                                </div>)});
+}
   render() {
- //img = this.getMarble();
+  img = this.getDefault();
  //img = ;
 // this.state.decoration.map((deco,i) => {return(<div className={s.image_container} key={i}><img src={deco.img} alt={deco.alt} type={deco.type['type']} /></div>)});
 
@@ -115,7 +117,7 @@ getGranite(){
 		          			<li>Онікс</li>
 		          		</ul>
 		          		<div className={s.inner_aquifer_container_wrapper_image}>		          				        				
-		          				{this.getMarble()}		          				
+		          				{img}		          				
 		          		</div>
 	          		</div>
 	          </div>
