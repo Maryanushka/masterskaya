@@ -51,11 +51,9 @@ componentDidMount() {
 
 getMarble(){
   let data = this.state.decoration; 
- 
   let j =0;
   for( let i= 0; i < data.length; i++){
       data[i].type= t[j%6];
-      j++;
   }
 
   return img = data
@@ -70,7 +68,6 @@ getGranite(){
   let j =0;
   for( let i= 0; i < data.length; i++){
       data[i].type= t[j%6];
-      j++;
   }
   return img = data
   .filter(function(data){return data.type['type'] === 'granite';})
@@ -84,7 +81,6 @@ getDefault(){
   let j =0;
   for( let i= 0; i < data.length; i++){
       data[i].type= t[j%6];
-      j++;
   }
   return img = data.map((deco,i) => {return(<div className={s.image_container} key={i}>
                                     <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
