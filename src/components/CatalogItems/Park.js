@@ -27,9 +27,9 @@ componentDidMount() {
 	          		<p>Складні архітектурні вироби</p>
 	          		<div className={s.inner_parkr_container_wrapper}>
 		          		<div className={s.inner_park_container_wrapper_image}>
-		          		        {this.state.park.map(function(park){
+		          		        {this.state.park.map(function(park, index){
 		          			return(
-		          				<div className={s.image_container}>
+		          				<div className={s.image_container} key={index}>
 		          				<img src={park.img} alt={park.alt} />
 		          				</div>)})}
 		          		</div>

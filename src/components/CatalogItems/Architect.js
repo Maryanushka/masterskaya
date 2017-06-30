@@ -27,9 +27,9 @@ componentDidMount() {
 	          		<p>Складні архітектурні вироби</p>
 	          		<div className={s.inner_architect_container_wrapper}>
 		          		<div className={s.inner_architect_container_wrapper_image}>
-		          		        {this.state.architecture.map(function(arc){
+		          		        {this.state.architecture.map(function(arc, index){
 		          			return(
-		          				<div className={s.image_container}>
+		          				<div className={s.image_container} key={index}>
 		          				<img src={arc.img} alt={arc.alt} />
 		          				</div>)})}
 		          		</div>

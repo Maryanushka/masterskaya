@@ -44,9 +44,9 @@ componentDidMount() {
          <div className={s.works_container_wrapper}>
 
             
-            {this.state.data.map(function(d){
+            {this.state.data.map(function(d,i){
               return(
-                <div className={s.works_container_caption}>
+                <div className={s.works_container_caption} key={i}>
                   <Link to="/" ><img src={d.img} alt={d.alt} /></Link>
                   <Link to="/" ><p>{d.tags.map(function(t){
                     return("#" + t + " ")

@@ -14,53 +14,114 @@ import Architect from './Architect';
 import Park from './Park';
 import Link from '../Link';
 
+
+let img ;
 class CatalogItems extends React.Component {
 constructor(props) {
    super(props);
    this.state={
-    decoration: []
+    decoration: [],
+    type: []
    }  
- }
+   this.getMarble = this.getMarble.bind(this); 
+   this.getGranite = this.getGranite.bind(this); 
+ };
+
+
 componentDidMount() {
-   fetch('http://maysternja.dataroot.co/catalog/decoration/')  
-  .then(response => response.json())
-  .then(json => {
-    console.log(json);
+var apiRequest1 = fetch('http://maysternja.dataroot.co/catalog/decoration/?type=%7BString%7D')
+	.then(function(response){ 
+         return response.json()
+});
+var apiRequest2 = fetch('http://maysternja.dataroot.co/catalog/decoration/')
+	.then(function(response){
+         return response.json()
+});
+  Promise.all([apiRequest1,apiRequest2]) 
+  .then(values => {
       this.setState({
-         decoration: json
+         decoration: values[1],
+         type: values[0]         
        })
-   });
+   });  
+}
+
+getMarble(){
+  let data = this.state.decoration; 
+  let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
+  var j =0;
+  for( var i= 0; i < data.length; i++){
+      data[i].type= t[j];
+      j++;
+      if(j < t.length){
+      }else {
+          j = j -6;
+      }
+  }
+  let img = this.state.decoration
+  .filter(function(data){
+  return data.type['type'] === 'marble';})
+  .map((deco,i) => {return(<div className={s.image_container} key={i}>
+                                    <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
+                                </div>)});
+  console.log(img);
+  return img;
+
+}
+
+getGranite(){
+  let data = this.state.decoration; 
+  let t = [{type: "marble"}, {type: 'onyx'},{type: 'granite'},{type:'quartzite'},{type:'sandstone'},{type:'limestone'}];
+  var j =0;
+  for( var i= 0; i < data.length; i++){
+      data[i].type= t[j];
+      j++;
+      if(j < t.length){
+      }else {
+          j = j -6;
+      }
+  }
+
+  console.log(data);
+  let img = this.state.decoration
+  .filter(function(data){
+  return data.type['type'] === 'granite';})
+  .map((deco,i) => {return(<div className={s.image_container} key={i}>
+                                    <img src={deco.img} alt={deco.alt} type={deco.type['type']} />
+                                </div>)});
+ // console.log(img);
+  return img;
+
 }
   render() {
+ //img = this.getMarble();
+ //img = ;
+// this.state.decoration.map((deco,i) => {return(<div className={s.image_container} key={i}><img src={deco.img} alt={deco.alt} type={deco.type['type']} /></div>)});
+
     return (
       <div className={s.root}>
-        <div className={s.catalog_container}>
-          <h1>Каталог продукції</h1>
+       <div className={s.catalog_container}>
+         <h1>Каталог продукції</h1>
 	          <div className={s.inner_aqufer_container}>
 	          		<p className={s.inner_aqufer_container_p}>Внутрішне та зовнішне оздоблення</p>
 	          		<div className={s.inner_aquifer_container_wrapper}>
 		          		<ul className={s.inner_aquifer_container_wrapper_filter}>
 		          			<li>Вид каменю:</li>
-		          			<li>Мармур</li>
-		          			<li>Граніт</li>
+		          			<li onClick={this.getMarble} type='marble'>Мармур</li>
+		          			<li onClick={this.getGranite} type='granite'>Граніт</li>
 		          			<li>Пісковик</li>
 		          			<li>Вапняк</li>
 		          			<li>Квацит</li>
 		          			<li>Онікс</li>
 		          		</ul>
-		          		<div className={s.inner_aquifer_container_wrapper_image}>
-		          		        {this.state.decoration.map(function(deco){
-		          			return(
-		          				<div className={s.image_container}>
-		          				<img src={deco.img} alt={deco.alt} />
-		          				</div>)})}
+		          		<div className={s.inner_aquifer_container_wrapper_image}>		          				        				
+		          				{this.getMarble()}		          				
 		          		</div>
 	          		</div>
 	          </div>
 	          <Architect />
-	          <Park />
-          		
-        </div>
+	          <Park />		
+        </div> 
       </div>
     );
   }
